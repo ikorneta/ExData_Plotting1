@@ -1,3 +1,6 @@
+download.file('https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip', destfile='./exdata_data_household_power_consumption.zip')
+system('unzip ./exdata_data_household_power_consumption.zip')
+
 library(lubridate)
 hpc <- read.csv("household_power_consumption.txt", sep=";", header=TRUE)
 hpc$Date <- dmy(hpc$Date)
